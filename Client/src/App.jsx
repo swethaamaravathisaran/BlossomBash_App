@@ -3,6 +3,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import  LandingPage from './Components/LandingPage';
 import  Signup from './Components/Signup';
 import LoginPage from './Components/LoginPage';
+import { withAuthenticationRequired } from '@auth0/auth0-react';
 // import FeaturesPage from './Components/FeaturesPage';
 import FeaturesPage from './Components/FeaturesPage';
 import Contact from './Components/Contact';
@@ -31,6 +32,11 @@ import UpdateSchedule from './Components/UpdateSchedule';
 import CheckoutPage from './Components/CheckoutPage';
 import OrderConfirmation from './Components/OrderConfirmation';
 import SuggestionsPage from './Components/Suggestion';
+const ProtectedRoute = ({ component, ...args }) => {
+  const Component = withAuthenticationRequired(component, args);
+  return <Component />;
+};
+
 export default function App() {
   return (
     <div>
@@ -41,7 +47,8 @@ export default function App() {
         <Route path="/login" element={<LoginPage/>} />
         <Route path="/features" element={<FeaturesPage/>} />
         <Route path="/contact" element={<Contact/>} />
-        <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/dashboard" element={<ProtectedRoute component={Dashboard} />} />
+        {/* <Route path="/dashboard" element={<Dashboard/>} /> */}
         <Route path="/flowerselection" element={<FlowerSelection/>} />
         <Route path="/cart" element={<CartPage/>} />
         <Route path="/eventsdashboard" element={<Eventsdashboard/>} />

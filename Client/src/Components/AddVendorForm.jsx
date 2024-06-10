@@ -1,5 +1,3 @@
-// AddVendorForm.jsx
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -9,10 +7,10 @@ const AddVendorForm = () => {
     image: '',
     name: '',
     contact: '',
-    services: [],
+    services: '',
     rating: 0,
     location: '',
-    availability: [],
+    availability: '',
   });
 
   const handleChange = (e) => {
@@ -22,13 +20,17 @@ const AddVendorForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('Form Data:', formData); // Check formData before making the request
     try {
       const response = await axios.post('http://localhost:4000/addvendor', formData);
-      console.log(response.data); // Log response for debugging
+      console.log('Vendor added successfully:', response.data);
       // Redirect to vendors page after successful submission
-      window.location.href = '/vendors'; // Use window.location.href for redirect
+      window.location.href = '/vendordashboard'; // Use window.location.href for redirect
     } catch (error) {
       console.error('Error adding vendor:', error);
+      if (error.response) {
+        console.error('Response data:', error.response.data);
+      }
     }
   };
 
