@@ -14,7 +14,7 @@ app.use(cors());
 
 async function connectdb() {
   try {
-    await mongoose.connect("mongodb+srv://SwethaAmaravathi:Swetha9865@blossom.ho7wing.mongodb.net/Blossom?retryWrites=true&w=majority&appName=Blossom");
+    await mongoose.connect("mongodb+srv://xxx@blossom.ho7wing.mongodb.net/Blossom?retryWrites=true&w=majority&appName=Blossom");
     console.log("db connection success");
 
     const x = 4000;
