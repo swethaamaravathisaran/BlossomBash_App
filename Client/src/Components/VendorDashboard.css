@@ -1,0 +1,92 @@
+/* VendorDashboard.css */
+
+.vendor-dashboard {
+  position: relative;
+}
+
+.vendor-dashboard .background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.vendor-dashboard .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity here */
+  z-index: -1;
+}
+
+.vendor-dashboard .container {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+.vendor-dashboard .back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.vendor-dashboard .back-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.vendor-dashboard h1 {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 10px;
+}
+
+.vendor-dashboard .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .vendor-dashboard .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.vendor-dashboard .dashboard-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.vendor-dashboard .dashboard-item:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.vendor-dashboard .dashboard-item h2 {
+  margin-bottom: 1rem;
+}
+
+.vendor-dashboard .dashboard-item p {
+  color: #333;
+}

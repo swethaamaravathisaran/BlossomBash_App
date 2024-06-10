@@ -1,0 +1,132 @@
+.budget-form-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.budget-form-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.budget-form-container .form-content {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 800px; /* Increased max-width */
+  width: calc(100% - 40px); /* Adjusted width to maintain spacing */
+}
+
+.budget-form-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.budget-form-container .form-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.budget-form-container .form-content label {
+  font-size: 1rem;
+  color: #666;
+}
+
+.budget-form-container .form-content input,
+.budget-form-container .form-content button {
+  padding: 12px 18px; /* Increased padding */
+  border-radius: 8px; /* Increased border radius */
+  margin-bottom: 20px; /* Increased margin */
+}
+
+.budget-form-container .form-content input {
+  border: 2px solid #ccc; /* Increased border width */
+  background: #f9f9f9;
+  transition: border 0.3s;
+}
+
+.budget-form-container .form-content input:focus {
+  border-color: #007bff;
+}
+
+.budget-form-container .form-content button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.budget-form-container .form-content button:hover {
+  background: #0056b3;
+}
+
+.budget-form-container .form-content .expense-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px; /* Adjusted margin */
+}
+
+.budget-form-container .form-content .expense-list li button {
+  color: #d8278c;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.budget-form-container .form-content .expense-list li button:hover {
+  color: #e62197;
+}
+
+.budget-form-container .form-content .download-csv {
+  display: inline-block;
+  padding: 12px 24px; /* Increased padding */
+  background: #dc3ca7;
+  color: white;
+  border-radius: 8px; /* Increased border radius */
+  text-decoration: none;
+  transition: background 0.3s;
+  margin-top: 20px; /* Added margin-top */
+}
+
+.budget-form-container .form-content .download-csv:hover {
+  background: #d739b0;
+}
+
+.budget-form-container .form-content .chart-container {
+  margin-top: 30px;
+}
+
+.budget-form-container .form-content .chart-container h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  width: 100%;
+}
+.background-video {
+  position:sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure video covers the entire background */
+  z-index: -1; /* Ensure video stays behind other elements */
+}

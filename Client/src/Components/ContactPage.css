@@ -1,0 +1,111 @@
+/* ContactPage.css */
+
+.contact-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7fafc; /* Adjust as needed */
+  padding: 2rem 0; /* Added padding top and bottom */
+  overflow: hidden; /* Ensure video does not overflow */
+}
+
+.contact-page .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure video covers the entire background */
+  z-index: -1; /* Ensure video stays behind other elements */
+}
+
+.contact-page .container {
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Increased maximum width */
+  text-align: center;
+  padding: 0 2rem; /* Improved padding */
+}
+
+.contact-page h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+  margin-left: 100px;
+}
+
+.contact-page .form-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 150%; /* Full width */
+  max-width: 1000px; /* Increased maximum width */
+  margin: 0 auto;
+}
+
+.contact-page .form-container label {
+  display: block;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.contact-page .form-container input,
+.contact-page .form-container textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.25rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.contact-page .form-container input:focus,
+.contact-page .form-container textarea:focus {
+  outline: none;
+  border-color: #da0d81; /* Adjusted focus color */
+}
+
+.contact-page .form-container textarea {
+  width: 100%;
+  min-height: 60px; /* Increased minimum height */
+}
+
+.contact-page .form-container button {
+  background-color: #333;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-page .form-container button:hover {
+  background-color: #1a202c;
+}
+
+.contact-page .back-link {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #4a5568;
+  text-decoration: none;
+  margin-left: 150px;
+}
+
+.contact-page .back-link:hover {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .contact-page .form-container {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,99 @@
+.CreateEvent .relative {
+    position: relative;
+  }
+  
+  .CreateEvent .CreateEvent-background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .CreateEvent .CreateEvent-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
+  
+  .CreateEvent .CreateEvent-container {
+    background-color: rgba(240, 240, 240, 0.2);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 800px; /* Increase the max-width for better spacing */
+    margin: 0 auto;
+  }
+  
+  .CreateEvent h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size: 2rem;
+  }
+  
+  .CreateEvent .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem; /* Increase gap between fields */
+  }
+  
+  .CreateEvent .input-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .CreateEvent .input-field {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    transition: border-color 0.3s;
+    margin-bottom: 1rem; /* Increase space between fields */
+  }
+  
+  .CreateEvent .input-field:focus {
+    outline: none;
+    border-color: #6b46c1;
+  }
+  
+  .CreateEvent .CreateEvent-btn-create-event {
+    background-color: #da349d;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem; /* Add margin to the button */
+  }
+  
+  .CreateEvent .CreateEvent-btn-create-event:hover {
+    background-color: #ed3acf;
+  }
+  
+  .CreateEvent .CreateEvent-back-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #efefef;
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: #da349d;
+  }
+  
+  .CreateEvent .CreateEvent-back-button:hover {
+    text-decoration: underline;
+    background-color: #dd2594;
+  }
+  

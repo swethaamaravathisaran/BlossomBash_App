@@ -1,0 +1,81 @@
+/* UpdateVendor.css */
+.update-vendor-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.form-content {
+  background: rgba(225, 219, 219, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(218, 213, 213, 0.5);
+  color: #000000;
+}
+
+.form-content h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.form-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-content label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-content input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.form-content button {
+  padding: 0.5rem;
+  background: #cf3293;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-content button:hover {
+  background: #e239a4;
+}
+
+.form-content p {
+  text-align: center;
+  margin-top: 1rem;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity here */
+  z-index: -1;
+}
