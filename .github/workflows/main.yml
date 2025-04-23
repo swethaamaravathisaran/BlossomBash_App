@@ -22,9 +22,11 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
+        working-directory: Client
         run: npm install
 
       - name: Run tests
+        working-directory: Client
         run: npm test
 
   deploy:
